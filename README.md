@@ -1,12 +1,12 @@
 # Light Untar
 ## Functionality
-This is a utility written in only 149 lines of Swift to extract tar files with the standard 512-block size, or a multiple thereof, created with the GNU tar command: `tar -cf`.
+This is a utility written in only 128 lines of Swift to extract tar files from Data with the standard 512-block size, or a multiple thereof, created with the GNU tar command: `tar -cf`.
 
 **Warning:** This code does not support GNU ZIP (gzip) compression, such as `tar -czf`, or non-standard block sizes.
 
 ## Example
 ```swift
-FileManager.default.createFilesAndDirectories(path: "file/path/extracted", tarPath: "file/path/42.tar")
+FileManager.default.createFilesAndDirectories(url: URL, tarData: Data)
 ```
 
 ## Objective-C
